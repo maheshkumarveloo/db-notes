@@ -1,0 +1,43 @@
+where usage 
+
+1. % as wildcard 
+
+where name like "R%" ==> all names starting with R 
+
+2. where in usage 
+
+where county in ('NL' , 'DE')
+
+3. where BETWEEN usage 
+
+where value BETWEEN 100 and 200
+
+
+******sorting 
+
+1. select title,names FROM table where tile like "R%" order by tile 
+** default is asc
+
+2. for descending 
+select title,name FROM table where title like "R%" order by title dec 
+
+
+
+******grouping 
+
+1. DISTINCT 
+
+**duplicate will select only unique row 
+Example
+
+SELECT distinct county FROM TABLE 
+
+2. Group by
+Retunr count 
+SELECT county FROM TABLE group by country 
+SELECT country 
+Combination with Having 
+
+SELECT count(country),names  FROM TABEL having count(country) > 4
+
+
